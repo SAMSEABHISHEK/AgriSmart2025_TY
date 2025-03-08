@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSmart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        #slider {
+            height: auto;
+        }
+
+        .slide-img {
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-[#edf1e4]">
+
+
+    <nav class="bg-[#edf1e4] fixed w-full z-20 top-0 start-0">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">  
+                <img src="Logo1.png" class="h-8" alt="Agri Smart">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap">AgriSmart</span>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="bg-[#edf1e4] items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+                id="navbar-sticky">
+                <ul class="flex flex-col p-0 mt-4 font-medium md:flex-row md:space-x-4 md:mt-0">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-4 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="showdeatil/index.html"
+                            class="block py-2 px-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0">Crop
+                            Check</a>
+                    </li>
+                    <li>
+                        <a href="Soilcheck/index.html"
+                            class="block py-2 px-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0">Soil
+                            Check</a>
+                    </li>
+                    <li>
+                        <a href="weather/index.html"
+                            class="block py-2 px-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0">Weather
+                            Check</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="hero.png" alt="Background Image" class="object-cover object-center w-full h-full" />
+        </div>
+
+        <div class="relative z-10 flex flex-col justify-center items-start h-full text-left pl-10">
+            <h1 class="text-5xl font-bold leading-tight mb-3 text-black">Empowering Farmers</h1>
+            <h1 class="text-5xl font-bold leading-tight mb-3 text-black">with Smart Solutions</h1>
+        </div>
+    </div>
+
+
+    <section class="bg-[#edf1e4]">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <div class="max-w-screen-md mb-8 lg:mb-16">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Empowering Farmers for Sustainable
+                    Growth</h2>
+                <p class="text-gray-500 sm:text-xl">At AgriSmart, we leverage technology and innovation to provide
+                    farmers with the insights they need to enhance crop health, optimize soil conditions, and adapt to
+                    weather changes, ultimately driving productivity and sustainability.</p>
+            </div>
+            <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+                <div>
+                    <div
+                        class="flex justify-center items-center mb-4 w-12 h-12 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+                        <i class="fas fa-seedling text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold text-gray-900">Crop Health Monitoring</h3>
+                    <p class="text-gray-500">Regular assessments of plant health help identify pests, diseases, and
+                        nutrient deficiencies, allowing farmers to take early action to improve crop yields.</p>
+                </div>
+                <div>
+                    <div
+                        class="flex justify-center items-center mb-4 w-12 h-12 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+                        <i class="fas fa-leaf text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold text-gray-900">Soil Health Analysis</h3>
+                    <p class="text-gray-500">Our soil analysis provides crucial insights into nutrient levels and pH
+                        balance, helping farmers make informed decisions to enhance soil health and improve crop
+                        productivity.</p>
+                </div>
+                <div>
+                    <div
+                        class="flex justify-center items-center mb-4 w-12 h-12 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+                        <i class="fas fa-cloud-sun text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold text-gray-900">Weather Monitoring</h3>
+                    <p class="text-gray-500">Stay informed about local weather conditions and forecasts to optimize
+                        planting, irrigation, and harvesting, minimizing crop damage and maximizing yields.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="resultContainer">
+            <img id="imagePreview" src="" alt="Uploaded Soil Image" style="max-width: 100%; border-radius: 8px; display: none;">
+            <div id="result"></div>
+        </div>
+        
+        </div>
+                
+    </section>
+
+
+    <div id="slider" class="relative h-96 overflow-hidden text-white">
+        <div class="flex transition-transform duration-500 ease-in-out" id="slides" style="transition-duration: 2000ms;">
+            <div class="min-w-full h-full relative">
+                <img src="Crops.jpeg" alt="Slide 1" class="slide-img w-full" />
+                <div class="absolute bottom-4 left-0 right-0 text-center bg-black bg-opacity-70 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-2">Crops Health</h2>
+                    <p class="text-sm md:text-base">A crop check examines plant health to identify pests, diseases,
+                        nutrient deficiencies, and water needs. Regular inspections help farmers take early action to
+                        improve growth and yield.</p>
+                </div>
+            </div>
+            <div class="min-w-full h-full relative">
+                <img src="Soil.jpeg" alt="Slide 2" class="slide-img w-full" />
+                <div class="absolute bottom-4 left-0 right-0 text-center bg-black bg-opacity-70 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-2">Soil Check</h2>
+                    <p class="text-sm md:text-base">A soil check tests the soil's nutrients and pH to see if it’s
+                        healthy for growing plants. It helps farmers or gardeners know what the soil needs to improve
+                        plant growth and keep the soil healthy.</p>
+                </div>
+            </div>
+            <div class="min-w-full h-full relative">
+                <img src="whether.jpeg" alt="Slide 3" class="slide-img w-full" />
+                <div class="absolute bottom-4 left-0 right-0 text-center bg-black bg-opacity-70 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-2">Dynamic Weather Conditions Check</h2>
+                    <p class="text-sm md:text-base">A weather check involves monitoring local weather conditions and
+                        forecasts, such as temperature, humidity, rainfall, and wind speed. Weather forecasts provide
+                        predictions about upcoming weather patterns, helping farmers and gardeners plan their activities
+                        like planting, irrigation, and harvesting. By using both current conditions and forecasts, they
+                        can optimize crop growth and prepare for potential adverse weather events.</p>
+                </div>
+            </div>
+        </div>
+
+        <button id="prev"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white bg-gray-800 rounded-full p-2 hover:bg-gray-700">
+            &#10094;
+        </button>
+        <button id="next"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white bg-gray-800 rounded-full p-2 hover:bg-gray-700">
+            &#10095;
+        </button>
+    </div>
+
+    <footer class="bg-[#edf1e4] rounded-lg shadow my-1">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center">Website Developed By:</span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Abhishek Samse</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Sumit Shinde</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Raju Pawar</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Kundan Shinde</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const slides = document.getElementById("slides");
+        const nextButton = document.getElementById("next");
+        const prevButton = document.getElementById("prev");
+
+        let currentIndex = 0;
+
+        function updateSlider() {
+            const totalSlides = slides.children.length;
+            const slideWidth = slides.clientWidth;
+            slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        function nextSlide() {
+            const totalSlides = slides.children.length;
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        }
+
+        nextButton.addEventListener("click", nextSlide);
+        prevButton.addEventListener("click", () => {
+            const totalSlides = slides.children.length;
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        setInterval(nextSlide, 3000);
+
+        const hamburgerButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+        const navbarMenu = document.getElementById('navbar-sticky');
+
+        hamburgerButton.addEventListener('click', () => {
+            navbarMenu.classList.toggle('hidden');
+        });
+
+    </script>
+
+</body>
+
+</html>
